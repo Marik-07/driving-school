@@ -1,14 +1,21 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
+// Твои реальные данные из скриншота
 const firebaseConfig = {
-  apiKey: "ТВОЙ_API_KEY",
-  authDomain: "ТВОЙ_AUTH_DOMAIN",
-  projectId: "ТВОЙ_PROJECT_ID",
-  storageBucket: "ТВОЙ_STORAGE_BUCKET",
-  messagingSenderId: "ТВОЙ_MESSAGING_SENDER_ID",
-  appId: "ТВОЙ_APP_ID"
+  apiKey: "AIzaSyCjF-EDmUY89q4tudpDFqG_TakmkcgZ2ow",
+  authDomain: "driving-school-1c9f6.firebaseapp.com",
+  projectId: "driving-school-1c9f6",
+  storageBucket: "driving-school-1c9f6.firebasestorage.app",
+  messagingSenderId: "521733819709",
+  appId: "1:521733819709:web:d17140a22f6deb9ef04954",
+  measurementId: "G-DQM7ZSG108"
 };
 
+// Инициализация Firebase
 const app = initializeApp(firebaseConfig);
+
+// Экспорт сервисов для использования в приложении
 export const auth = getAuth(app);
+export const db = getFirestore(app);
